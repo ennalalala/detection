@@ -13,6 +13,7 @@
 # train 
 ## 运行detection目录下的end2end.sh，注意根据情况修改其中的参数，如模型文件路径、网络结构路径、迭代次数等，此脚本以end2end模式训练faster_rcnn
 ## 运行detection目录下的alt_opt.sh，注意同上，此脚本以alt_opt模式训练faster_rcnn，
+## 目前看end2end比alternate optimize效果好
 ## 训练的注意事项：总的迭代次数最好>=10个epoch，根据情况修改运行参数或solver设置或网络结构设置
 ## 训练日志会保存在output路径下，包含Loss
 ## 需要画loss曲线可以借助detection目录下的plot_loss.py，使用前需将日志中的 包含" loss = "的行提取到一个文件中，可借助grep " loss = " filename > o,也可自己另写脚本
