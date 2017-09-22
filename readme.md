@@ -3,7 +3,7 @@
 ## git clone --recursive
 ## 根据自己的配置修改caffe-fast-rcnn/Makefile.config中未注释内容，若cudnn版本与faster-rcnn要求兼容，可取消注释第5行
 ## 在lib目录下 执行make
-## 在caffe-fast-rcnn目录下 执行make -j   make pycaffe
+## 在caffe-fast-rcnn目录下 执行make -j和make pycaffe
 ## 编译完成，即可
 
 # 数据准备
@@ -16,7 +16,7 @@
 ## 目前看end2end比alternate optimize效果好
 ## 训练的注意事项：总的迭代次数最好>=10个epoch，根据情况修改运行参数或solver设置或网络结构设置
 ## 训练得到的模型会保存在output路径下
-## 训练时运行脚本注意保存log， 如 sh end2end.sh > log 2&>1
+## 训练时运行脚本注意保存log， 如 sh end2end.sh > log 2>&1
 ## 需要画loss曲线可以借助detection目录下的plot_loss.py，使用前需将日志中的 包含" loss = "的行提取到一个文件中，可借助grep " loss = " filename > o,也可自己另写脚本
 
 # test
